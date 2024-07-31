@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .card {
+            width: 300px;
+            height: 500px;
+            position: relative;
+            margin: 200px auto;
+            background: blue;
+        }
+
+        .source {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .skirt {
+            position: absolute;
+            inset: 0;
+            background: black;
+            --mask: url(./img/clother.png) 50% 50% / cover;
+            mask: var(--mask);
+            -webkit-mask: var(--mask);
+            /* mix-blend-mode: multiply; */
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img class="source" src="./img/247c82c190524324bc9603817e814f09.jpeg" />
+        <div class="skirt"></div>
+    </div>
+</body>
+
+</html>
